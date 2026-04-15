@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70f91c4a515d684fa8c12ef1f4c36b7, type: 3}
+  m_Name: Alexandria
+  m_EditorClassIdentifier: Assembly-CSharp::PortData
+  portName: 
+  portBackground: {fileID: 0}
+  tradedItems:
+  - {fileID: 11400000, guid: 80a1d1fdd6844de4ab1078d97710a62a, type: 2}
