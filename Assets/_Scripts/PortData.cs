@@ -1,6 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class MarketItem
+{
+    public ItemData item;
+    public int buyPrice;
+    public int sellPrice;
+}
+
 [CreateAssetMenu(fileName = "NewPort", menuName = "ProjectTW/Port")]
 public class PortData : ScriptableObject
 {
@@ -10,5 +18,5 @@ public class PortData : ScriptableObject
 
     [Header("Market")]
     // Bu limanda hangi ürünler alınıp satılabiliyor?
-    public List<ItemData> tradedItems = new List<ItemData>();
+    public List<MarketItem> tradedItems = new List<MarketItem>();
 }
