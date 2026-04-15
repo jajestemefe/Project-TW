@@ -21,4 +21,25 @@ public class PlayerStats : MonoBehaviour
     {
         if (Instance == null) Instance = this;
     }
+
+    public void AddItem(ItemData item, int amount)
+    {
+        if (inventory.ContainsKey(item))
+            inventory[item] += amount;
+        else
+            inventory.Add(item, amount);
+
+        currentCargoUsed += amount;
+        Debug.Log($"{amount} adet {item.itemName} alindi. Guncel miktar: {inventory[item]}");
+    }
+
+    public void RemoveItem(ItemData item, int amount)
+    {
+        if (inventory.ContainsKey(item) && inventory[item] >= amount)
+        {
+            inventory[item] -= amount;
+            currentCargoUsed -= amount;
+            Debug.Log($"{amount} adet {item.itemName} satildi. Kalan: {inventory[item]}");
+        }
+    }
 }
